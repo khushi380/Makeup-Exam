@@ -1,0 +1,83 @@
+.stat-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  overflow: hidden;
+  cursor: default;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--card-color, var(--accent));
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--card-color, var(--accent));
+}
+
+.stat-card:hover .stat-glow {
+  opacity: 1;
+}
+
+.stat-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 80% 80% at 10% 50%, var(--card-color, transparent) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  transition: background 0.25s;
+}
+
+.stat-card:hover .stat-icon {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+.stat-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-value {
+  font-family: var(--font-head);
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.stat-card:hover .stat-value {
+  color: var(--card-color, var(--text));
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 480px) {
+  .stat-card { padding: 18px 20px; gap: 14px; }
+  .stat-value { font-size: 1.8rem; }
+  .stat-icon  { width: 44px; height: 44px; font-size: 1.5rem; }
+}
