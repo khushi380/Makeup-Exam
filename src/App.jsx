@@ -7,10 +7,10 @@ import Participants from "./pages/Participants";
 import "./App.css";
 
 const initialEvents = [
-  { id: 1, name: "Tech Summit 2025", date: "2025-08-15", venue: "Convention Center, Delhi", organizer: "Riya Sharma", status: "Upcoming" },
-  { id: 2, name: "Design Thinking Workshop", date: "2025-06-10", venue: "Innovation Hub, Mumbai", organizer: "Arjun Mehta", status: "Upcoming" },
-  { id: 3, name: "Startup Pitch Night", date: "2025-03-20", venue: "Startup Loft, Bangalore", organizer: "Priya Nair", status: "Completed" },
-  { id: 4, name: "AI & ML Conference", date: "2025-05-05", venue: "IIT Auditorium, Chennai", organizer: "Vikram Rao", status: "Completed" },
+  { id: 1, name: "Tech Summit 2025", date: "2026-08-15", venue: "Convention Center, Delhi", organizer: "Riya Sharma", status: "Upcoming" },
+  { id: 2, name: "Design Thinking Workshop", date: "2026-06-10", venue: "Innovation Hub, Mumbai", organizer: "Arjun Mehta", status: "Upcoming" },
+  { id: 3, name: "Startup Pitch Night", date: "2026-03-20", venue: "Startup Loft, Bangalore", organizer: "Priya Nair", status: "Completed" },
+  { id: 4, name: "AI & ML Conference", date: "2026-05-05", venue: "IIT Auditorium, Chennai", organizer: "Vikram Rao", status: "Completed" },
 ];
 
 const initialParticipants = [
